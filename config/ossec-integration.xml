@@ -1,0 +1,14 @@
+<!--
+  Wazuh integratord snippet wiring the custom-vigil.py bridge into Wazuh.
+
+  Must be placed inside an existing <ossec_config> block in
+  /var/ossec/etc/ossec.conf, not between two separate <ossec_config> blocks.
+  Requires: systemctl restart wazuh-manager
+-->
+<ossec_config>
+  <integration>
+    <name>custom-vigil.py</name>
+    <level>12</level>
+    <alert_format>json</alert_format>
+  </integration>
+</ossec_config>
